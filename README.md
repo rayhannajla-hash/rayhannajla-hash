@@ -61,6 +61,12 @@ Semua proyek dibangun dalam kondisi nyata:
 | 11 | [Task.html Dashboard](#11-taskhtml-team-dashboard) | ✅ Done | Alpine.js, HTML |
 | 12 | [AI Engineer Roadmap Tool](#12-ai-engineer-roadmap-tool) | ✅ Done | HTML/JS |
 
+### 📧 Email Automation
+
+| # | Project | Status | Stack |
+|---|---------|--------|-------|
+| 13 | [Outlook Email Manager & Daily Summary](#13-outlook-email-manager--daily-summary) | 🔄 In Progress | Python, openpyxl, win32com |
+
 ---
 
 ## 📋 Project Details
@@ -214,6 +220,38 @@ Alpine.js single-file app dengan KPI cards, import/export JSON, column mapping f
 Tool untuk memvisualisasikan dan melacak progress belajar AI Engineering. 4 fase, 20 topik, localStorage persistence.
 
 **Tech:** `HTML/JS` `localStorage`
+
+---
+
+### 13. Outlook Email Manager & Daily Summary
+
+**Otomasi email Outlook — copy ke Excel, sortir per penerima, summary harian**
+
+Workflow 3 tahap untuk mengelola inbox Outlook secara otomatis setiap pagi:
+
+**Flow:**
+```
+[Copy Email Baru dari Outlook] → [Sortir di Excel by Recipient] → [Buat Summary Pagi]
+```
+
+**Task Breakdown:**
+
+| # | Task | Status | Deskripsi |
+|---|------|--------|-----------|
+| 1 | **Copy Email dari Outlook ke Excel** | 🔲 Todo | Baca inbox Outlook via win32com, copy subject/sender/date/body ke sheet Excel baru |
+| 2 | **Sortir Email by Direct Recipient** | 🔲 Todo | Filter & kategorikan email berdasarkan penerima langsung: `to:budhiarso` vs email lain (CC/BCC/broadcast) |
+| 3 | **Buat Summary Email Setiap Pagi** | 🔲 Todo | Generate ringkasan harian: jumlah email masuk, email direct to Budhiarso, topik utama, action items |
+
+**Rencana Implementasi:**
+
+- `email_fetcher.py` — Koneksi ke Outlook via `win32com.client`, tarik email baru sejak kemarin
+- `email_sorter.py` — Parse field `To`, pisahkan direct email vs CC/broadcast
+- `summary_generator.py` — Buat summary sheet di Excel + opsional kirim via Telegram bot (AINUN)
+- Scheduler: Windows Task Scheduler / cron job untuk jalankan otomatis tiap pagi 07:00
+
+**Tech:** `Python` `win32com` `openpyxl` `Outlook COM API`
+
+**Target Impact:** Zero email terlewat, laporan harian siap sebelum jam kerja mulai
 
 ---
 
