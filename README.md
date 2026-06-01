@@ -65,7 +65,7 @@ Semua proyek dibangun dalam kondisi nyata:
 
 | # | Project | Status | Stack |
 |---|---------|--------|-------|
-| 13 | [Outlook Email Manager & Daily Summary](#13-outlook-email-manager--daily-summary) | 🔄 In Progress | Python, openpyxl, win32com |
+| 13 | [Outlook Email Manager & Daily Summary](#13-outlook-email-manager--daily-summary) | ✅ Done | Python, openpyxl, win32com |
 
 ---
 
@@ -236,22 +236,45 @@ Workflow 3 tahap untuk mengelola inbox Outlook secara otomatis setiap pagi:
 
 **Task Breakdown:**
 
-| # | Task | Status | Deskripsi |
-|---|------|--------|-----------|
-| 1 | **Copy Email dari Outlook ke Excel** | 🔲 Todo | Baca inbox Outlook via win32com, copy subject/sender/date/body ke sheet Excel baru |
-| 2 | **Sortir Email by Direct Recipient** | 🔲 Todo | Filter & kategorikan email berdasarkan penerima langsung: `to:budhiarso` vs email lain (CC/BCC/broadcast) |
-| 3 | **Buat Summary Email Setiap Pagi** | 🔲 Todo | Generate ringkasan harian: jumlah email masuk, email direct to Budhiarso, topik utama, action items |
+| # | Task | Status | File |
+|---|------|--------|------|
+| 1 | **Copy Email dari Outlook ke Excel** | ✅ Done | `email_manager/email_fetcher.py` |
+| 2 | **Sortir Email by Direct Recipient** | ✅ Done | `email_manager/email_sorter.py` |
+| 3 | **Buat Summary Email Setiap Pagi** | ✅ Done | `email_manager/summary_generator.py` |
 
-**Rencana Implementasi:**
+**File Structure:**
+```
+email_manager/
+├── config.py             ← Konfigurasi: nama target, path Excel, Telegram token
+├── email_fetcher.py      ← Task 1: Copy email Outlook → Excel
+├── email_sorter.py       ← Task 2: Sortir per kategori (Direct/CC/Broadcast)
+├── summary_generator.py  ← Task 3: Generate summary sheet + kirim Telegram
+├── run_daily.py          ← Orchestrator: jalankan semua task sekaligus
+├── setup_scheduler.py    ← Daftarkan ke Windows Task Scheduler (jam 07:00)
+└── requirements.txt      ← pywin32, openpyxl, requests
+```
 
-- `email_fetcher.py` — Koneksi ke Outlook via `win32com.client`, tarik email baru sejak kemarin
-- `email_sorter.py` — Parse field `To`, pisahkan direct email vs CC/broadcast
-- `summary_generator.py` — Buat summary sheet di Excel + opsional kirim via Telegram bot (AINUN)
-- Scheduler: Windows Task Scheduler / cron job untuk jalankan otomatis tiap pagi 07:00
+**Cara Pakai:**
+```bash
+pip install -r requirements.txt
 
-**Tech:** `Python` `win32com` `openpyxl` `Outlook COM API`
+# Edit config.py: isi TARGET_NAME, TARGET_EMAIL, EXCEL_PATH
 
-**Target Impact:** Zero email terlewat, laporan harian siap sebelum jam kerja mulai
+python run_daily.py            # jalankan semua task
+python run_daily.py --task 1   # hanya fetch email
+python run_daily.py --task 2 3 # hanya sort + summary
+
+python setup_scheduler.py      # daftarkan ke Windows Task Scheduler
+```
+
+**Output Excel (per hari):**
+- Sheet `YYYY-MM-DD` — raw email dari Outlook
+- Sheet `Sorted_YYYY-MM-DD` — email dikelompokkan: Direct To / CC / Broadcast / Other
+- Sheet `Summary_YYYY-MM-DD` — statistik, top sender, keyword topik, action items
+
+**Tech:** `Python` `pywin32` `openpyxl` `Outlook COM API` `Telegram Bot API`
+
+**Impact:** Inbox terpantau otomatis, summary siap sebelum jam kerja, integrasi AINUN Telegram bot
 
 ---
 
