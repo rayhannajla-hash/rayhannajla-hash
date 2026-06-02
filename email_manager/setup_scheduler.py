@@ -2,7 +2,7 @@
 Setup Windows Task Scheduler untuk menjalankan run_daily.py otomatis setiap pagi.
 Jalankan SEKALI dengan: python setup_scheduler.py
 
-Requires: pywin32 sudah terinstall
+Tidak butuh admin — menggunakan /rl LIMITED (user-level).
 """
 
 import subprocess
@@ -19,24 +19,30 @@ def create_task(task_name, script_path, python_path, hour=7, minute=0):
         "/tr", f'"{python_path}" "{script_path}"',
         "/sc", "DAILY",
         "/st", trigger_time,
-        "/f",   # overwrite jika sudah ada
-        "/rl", "HIGHEST",
+        "/f",           # overwrite jika sudah ada
+        # Tanpa /rl HIGHEST — cukup user-level, tidak butuh admin
     ]
-    print(f"  Mendaftarkan task: {task_name}")
-    print(f"  Waktu: setiap hari jam {trigger_time}")
+    print(f"  Mendaftarkan task : {task_name}")
+    print(f"  Waktu             : setiap hari jam {trigger_time}")
     result = subprocess.run(cmd, capture_output=True, text=True)
     if result.returncode == 0:
-        print(f"  ✅ Task berhasil dibuat.")
+        print("  ✅ Task berhasil dibuat.")
     else:
-        print(f"  ❌ Gagal: {result.stderr.strip()}")
+        err = result.stderr.strip() or result.stdout.strip()
+        print(f"  ❌ Gagal: {err}")
+        print()
+        print("  Alternatif manual:")
+        print(f"    1. Buka Task Scheduler (cari di Start Menu)")
+        print(f"    2. Create Basic Task → Daily → jam 07:00")
+        print(f"    3. Action: Start a Program")
+        print(f"       Program : {python_path}")
+        print(f"       Argument: \"{script_path}\"")
     return result.returncode == 0
 
 
 def main():
     script_dir = Path(__file__).parent.resolve()
     script_path = script_dir / "run_daily.py"
-
-    # Gunakan Python yang sama dengan yang menjalankan script ini
     python_path = sys.executable
 
     if not script_path.exists():
@@ -50,7 +56,6 @@ def main():
     print(f"  Python : {python_path}")
     print()
 
-    # Task utama: jalankan semua task jam 07:00
     ok = create_task(
         task_name="OutlookEmailManager_DailySummary",
         script_path=script_path,
