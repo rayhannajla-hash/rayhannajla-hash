@@ -35,7 +35,7 @@ Semua proyek dibangun dalam kondisi nyata:
 |---|---------|--------|-------|
 | 01 | [Virtual Design Engineer (VDE)](#01-virtual-design-engineer) | ✅ Done | Ollama, AnythingLLM, Qwen2.5 7B |
 | 09 | [AINUN Telegram Bot](#09-ainun-telegram-bot) | ✅ Done | OpenClaw, Telegram API |
-| 10 | [OpenClaw Self-hosted Gateway](#10-openclaw-self-hosted-gateway) | 🔄 In Progress | GCP, Docker |
+| 10 | [OpenClaw Self-hosted Gateway](#10-openclaw-self-hosted-gateway) | ✅ Done | GCP, Docker |
 
 ### 🏭 Work Productivity Tools
 
@@ -189,11 +189,11 @@ Bot Telegram pribadi terhubung ke OpenClaw self-hosted. Nama: "AINUN", model: ki
 
 **AI gateway di Google Cloud Platform via Docker**
 
-Perjalanan multi-platform: Railway → Render → Koyeb → Oracle Cloud → **GCP** (berhasil). VM + Docker deployment running, troubleshooting browser extension connection.
+Perjalanan multi-platform: Railway → Render → Koyeb → Oracle Cloud → **GCP** (berhasil). VM + Docker deployment running, dan koneksi browser extension ke gateway sudah berhasil tersambung.
 
 **Tech:** `GCP` `Docker` `OpenClaw` `Linux Mint`
 
-**Status:** 🔄 VM & Docker ✅ | Browser extension 🔧
+**Status:** ✅ VM & Docker ✅ | Browser extension ✅
 
 ---
 
