@@ -1,13 +1,13 @@
-# 🤖 AI Engineer Portfolio — Budhi
+# 🤖 AI Engineer Portfolio — Budhiarso Santosa
 
-> Self-taught AI Engineer | LLM & Prompt Engineering | Local AI Infrastructure  
+> Self-taught AI Engineer · LLM & Prompt Engineering · Local AI Infrastructure  
 > 📍 Indonesia · Manufacturing & Touch Panel Design Domain
 
 ---
 
 ## 👤 About
 
-Saya adalah Team Leader desain **resistive touch panel** di lingkungan manufaktur, yang secara mandiri membangun berbagai sistem dan tools berbasis AI untuk meningkatkan produktivitas tim dan mengeksplorasi kemungkinan otomasi.
+Saya **Budhiarso Santosa**, Team Leader desain **resistive touch panel** di lingkungan manufaktur, yang secara mandiri membangun berbagai sistem dan tools berbasis AI untuk meningkatkan produktivitas tim dan mengeksplorasi otomasi.
 
 Semua proyek dibangun dalam kondisi nyata:
 - Laptop kerja dengan **IT restrictions** (no admin, no CMD, no internet untuk data sensitif)
@@ -20,8 +20,8 @@ Semua proyek dibangun dalam kondisi nyata:
 
 | Metric | Value |
 |--------|-------|
-| Total Projects | 13+ |
-| Domain Coverage | 5 area |
+| Total Projects | 13 |
+| Domain Coverage | 5 kategori |
 | Learning Approach | 100% Self-taught |
 | Primary Focus | LLM, Prompt Engineering, Local AI |
 
@@ -29,43 +29,45 @@ Semua proyek dibangun dalam kondisi nyata:
 
 ## 🗂️ Project Index
 
+> Klik nama project untuk membuka repo-nya. Detail tiap project ada di bawah.
+
 ### 🏗️ Local AI Infrastructure
 
 | # | Project | Status | Stack |
 |---|---------|--------|-------|
-| 01 | [Virtual Design Engineer (VDE)](#01-virtual-design-engineer) | ✅ Done | Ollama, AnythingLLM, Qwen2.5 7B |
-| 09 | [AINUN Telegram Bot](#09-ainun-telegram-bot) | ✅ Done | OpenClaw, Telegram API |
-| 10 | [OpenClaw Self-hosted Gateway](#10-openclaw-self-hosted-gateway) | ✅ Done | GCP, Docker |
+| 01 | [Virtual Design Engineer (VDE)](https://github.com/rayhannajla-hash/01-virtual-design-engineer) | ✅ Done | Ollama, AnythingLLM, Qwen2.5 7B |
+| 09 | [AINUN Telegram Bot](https://github.com/rayhannajla-hash/09-ainun-telegram-bot) | ✅ Done | OpenClaw, Telegram API |
+| 10 | [OpenClaw Self-hosted Gateway](https://github.com/rayhannajla-hash/10-openclaw-gcp-deployment) | ✅ Done | GCP, Docker |
 
 ### 🏭 Work Productivity Tools
 
 | # | Project | Status | Stack |
 |---|---------|--------|-------|
-| 02 | [FreeCAD Touch Panel Macro Suite](#02-freecad-touch-panel-macro-suite) | ✅ Done | FreeCAD, Python, openpyxl |
-| 07 | [Design Standard Hub](#07-design-standard-hub) | ✅ Done | Excel |
-| 08 | [LLM Migration Script](#08-llm-migration-script) | ✅ Done | Python, LM Studio API |
-| 06 | [PO Order Management System](#06-po-order-management-system) | ✅ Done | Python, xlsxwriter |
+| 02 | [FreeCAD Touch Panel Macro Suite](https://github.com/rayhannajla-hash/02-freecad-touch-panel-macro) | ✅ Done | FreeCAD, Python, openpyxl |
+| 06 | [PO Order Management System](https://github.com/rayhannajla-hash/06-po-order-management) | ✅ Done | Python, xlsxwriter |
+| 07 | [Design Standard Hub](https://github.com/rayhannajla-hash/07-design-standard-hub) | ✅ Done | Excel |
+| 08 | [LLM Migration Script](https://github.com/rayhannajla-hash/08-llm-migration-script) | ✅ Done | Python, LM Studio API |
 
 ### 🌐 AI-Powered Web Tools (Single-file HTML)
 
 | # | Project | Status | Stack |
 |---|---------|--------|-------|
-| 03 | [AppForge AI & CodeForge AI](#03-appforge-ai--codeforge-ai) | ✅ Done | HTML/JS, Multi-provider AI |
-| 04 | [ExcelAI Template Generator](#04-excelai-template-generator) | ✅ Done | HTML/JS, SheetJS |
-| 05 | [AI Document Editor](#05-ai-document-editor) | ✅ Done | HTML/JS, PDF.js, mammoth |
+| 03 | [AppForge AI & CodeForge AI](https://github.com/rayhannajla-hash/03-appforge-codeforge-ai) | ✅ Done | HTML/JS, Multi-provider AI |
+| 04 | [ExcelAI Template Generator](https://github.com/rayhannajla-hash/04-excelai-template-generator) | ✅ Done | HTML/JS, SheetJS |
+| 05 | [AI Document Editor](https://github.com/rayhannajla-hash/05-ai-document-editor) | ✅ Done | HTML/JS, PDF.js, mammoth |
 
 ### 📊 Productivity Dashboards
 
 | # | Project | Status | Stack |
 |---|---------|--------|-------|
-| 11 | [Task.html Dashboard](#11-taskhtml-team-dashboard) | ✅ Done | Alpine.js, HTML |
-| 12 | [AI Engineer Roadmap Tool](#12-ai-engineer-roadmap-tool) | ✅ Done | HTML/JS |
+| 11 | [Task.html Dashboard](https://github.com/rayhannajla-hash/11-task-html-dashboard) | ✅ Done | Alpine.js, HTML |
+| 12 | [AI Engineer Roadmap Tool](https://github.com/rayhannajla-hash/12-ai-engineer-roadmap) | ✅ Done | HTML/JS |
 
 ### 🚀 AI Product & Automation
 
 | # | Project | Status | Stack |
 |---|---------|--------|-------|
-| 13 | [Santosa AI Works](#13-santosa-ai-works) | ✅ Live | FastAPI, Supabase, GCP, Telegram |
+| 13 | [Santosa AI Works](https://github.com/rayhannajla-hash/santosa-ai-works) | ✅ Live | FastAPI, Supabase, GCP, Telegram |
 
 ---
 
@@ -85,9 +87,9 @@ Dibangun karena kebutuhan nyata: tim perlu konsultasi standar IPC/IEC dan dokume
 - Model: Qwen2.5 7B Instruct (stable), juga diuji Phi-3.1 Mini & Mistral 7B
 - Zero cloud dependency — semua tetap lokal
 
-**Tech:** `Ollama` `AnythingLLM` `Open WebUI` `LM Studio` `Qwen2.5 7B`
-
-**Impact:** Tim bisa konsultasi standar teknis tanpa risiko kebocoran data ke cloud
+**Tech:** `Ollama` `AnythingLLM` `Open WebUI` `LM Studio` `Qwen2.5 7B`  
+**Impact:** Tim bisa konsultasi standar teknis tanpa risiko kebocoran data ke cloud  
+**Repo:** [01-virtual-design-engineer](https://github.com/rayhannajla-hash/01-virtual-design-engineer)
 
 ---
 
@@ -104,9 +106,9 @@ Kumpulan macro FreeCAD berbasis Python untuk otomasi desain panel sentuh. Dikemb
 - FPC Tail Area
 - Export DXF/STEP untuk manufaktur
 
-**Tech:** `FreeCAD` `Python` `openpyxl` `Claude Code` → Output: `DXF` `STEP`
-
-**Impact:** Target tim meningkat dari 1 → 5 panel design/hari
+**Tech:** `FreeCAD` `Python` `openpyxl` `Claude Code` → Output: `DXF` `STEP`  
+**Impact:** Target tim meningkat dari 1 → 5 panel design/hari  
+**Repo:** [02-freecad-touch-panel-macro](https://github.com/rayhannajla-hash/02-freecad-touch-panel-macro)
 
 ---
 
@@ -121,7 +123,8 @@ Dua tool web single-file HTML. AppForge untuk generate struktur aplikasi, CodeFo
 - Zero installation — satu file HTML, buka di browser
 - API key tersimpan lokal (tidak ke server)
 
-**Tech:** `HTML/JS` `Groq API` `OpenRouter` `Gemini API` `Anthropic API`
+**Tech:** `HTML/JS` `Groq API` `OpenRouter` `Gemini API` `Anthropic API`  
+**Repo:** [03-appforge-codeforge-ai](https://github.com/rayhannajla-hash/03-appforge-codeforge-ai)
 
 ---
 
@@ -131,9 +134,9 @@ Dua tool web single-file HTML. AppForge untuk generate struktur aplikasi, CodeFo
 
 Deskripsikan kebutuhan spreadsheet → AI generate template Excel siap pakai.
 
-**Tech:** `HTML/JS` `Free-tier AI APIs` `SheetJS`
-
-**Impact:** Template Excel dalam menit vs jam setup manual
+**Tech:** `HTML/JS` `Free-tier AI APIs` `SheetJS`  
+**Impact:** Template Excel dalam menit vs jam setup manual  
+**Repo:** [04-excelai-template-generator](https://github.com/rayhannajla-hash/04-excelai-template-generator)
 
 ---
 
@@ -141,9 +144,10 @@ Deskripsikan kebutuhan spreadsheet → AI generate template Excel siap pakai.
 
 **Editor dokumen cerdas multi-format dengan AI**
 
-Upload PDF/Excel/Word → AI bisa rangkum, revisi, atau ekstrak informasi.
+Upload PDF/Excel/Word → AI bisa rangkum, revisi, ekstrak, terjemah, atau analisis isinya. Multi-provider, dengan opsi LM Studio lokal untuk dokumen sensitif.
 
-**Tech:** `HTML/JS` `PDF.js` `mammoth.js` `SheetJS` `Free AI APIs`
+**Tech:** `HTML/JS` `PDF.js` `mammoth.js` `SheetJS` `Multi-provider AI`  
+**Repo:** [05-ai-document-editor](https://github.com/rayhannajla-hash/05-ai-document-editor)
 
 ---
 
@@ -153,9 +157,9 @@ Upload PDF/Excel/Word → AI bisa rangkum, revisi, atau ekstrak informasi.
 
 Multi-sheet dashboard dengan summary, filtering, dan status tracking. Migrasi dari openpyxl ke xlsxwriter untuk stabilitas.
 
-**Tech:** `Python` `xlsxwriter` `Excel`
-
-**Impact:** Tracking 478 PO terstruktur menggantikan tracking manual
+**Tech:** `Python` `xlsxwriter` `Excel`  
+**Impact:** Tracking 478 PO terstruktur menggantikan tracking manual  
+**Repo:** [06-po-order-management](https://github.com/rayhannajla-hash/06-po-order-management)
 
 ---
 
@@ -165,7 +169,8 @@ Multi-sheet dashboard dengan summary, filtering, dan status tracking. Migrasi da
 
 Single source of truth untuk semua standar desain tim. Fase 1 dari rencana 3-fase peningkatan produktivitas.
 
-**Tech:** `Excel`
+**Tech:** `Excel`  
+**Repo:** [07-design-standard-hub](https://github.com/rayhannajla-hash/07-design-standard-hub)
 
 ---
 
@@ -175,9 +180,9 @@ Single source of truth untuk semua standar desain tim. Fase 1 dari rencana 3-fas
 
 Script Python menggunakan LM Studio local API untuk batch processing dan klasifikasi standar dari file Excel yang tidak terstruktur.
 
-**Tech:** `Python` `LM Studio API` `Qwen2.5 7B` `openpyxl`
-
-**Highlight:** 100% lokal — tidak ada data keluar ke internet
+**Tech:** `Python` `LM Studio API` `Qwen2.5 7B` `openpyxl`  
+**Highlight:** 100% lokal — tidak ada data keluar ke internet  
+**Repo:** [08-llm-migration-script](https://github.com/rayhannajla-hash/08-llm-migration-script)
 
 ---
 
@@ -187,7 +192,8 @@ Script Python menggunakan LM Studio local API untuk batch processing dan klasifi
 
 Bot Telegram pribadi terhubung ke OpenClaw self-hosted. Nama: "AINUN", model: kimi-k2.5:cloud. Resolved: config corruption + pairing issues setelah forced power-off.
 
-**Tech:** `OpenClaw` `Telegram Bot API` `kimi-k2.5` `Linux Mint`
+**Tech:** `OpenClaw` `Telegram Bot API` `kimi-k2.5` `Linux Mint`  
+**Repo:** [09-ainun-telegram-bot](https://github.com/rayhannajla-hash/09-ainun-telegram-bot)
 
 ---
 
@@ -197,9 +203,9 @@ Bot Telegram pribadi terhubung ke OpenClaw self-hosted. Nama: "AINUN", model: ki
 
 Perjalanan multi-platform: Railway → Render → Koyeb → Oracle Cloud → **GCP** (berhasil). VM + Docker deployment running, dan koneksi browser extension ke gateway sudah berhasil tersambung.
 
-**Tech:** `GCP` `Docker` `OpenClaw` `Linux Mint`
-
-**Status:** ✅ VM & Docker ✅ | Browser extension ✅
+**Tech:** `GCP` `Docker` `OpenClaw` `Linux Mint`  
+**Status:** ✅ VM & Docker · ✅ Browser extension  
+**Repo:** [10-openclaw-gcp-deployment](https://github.com/rayhannajla-hash/10-openclaw-gcp-deployment)
 
 ---
 
@@ -209,7 +215,8 @@ Perjalanan multi-platform: Railway → Render → Koyeb → Oracle Cloud → **G
 
 Alpine.js single-file app dengan KPI cards, import/export JSON, column mapping fleksibel. Dirancang untuk berjalan tanpa instalasi di laptop dengan IT restrictions.
 
-**Tech:** `Alpine.js` `HTML/CSS/JS`
+**Tech:** `Alpine.js` `HTML/CSS/JS`  
+**Repo:** [11-task-html-dashboard](https://github.com/rayhannajla-hash/11-task-html-dashboard)
 
 ---
 
@@ -219,7 +226,8 @@ Alpine.js single-file app dengan KPI cards, import/export JSON, column mapping f
 
 Tool untuk memvisualisasikan dan melacak progress belajar AI Engineering. 4 fase, 20 topik, localStorage persistence.
 
-**Tech:** `HTML/JS` `localStorage`
+**Tech:** `HTML/JS` `localStorage`  
+**Repo:** [12-ai-engineer-roadmap](https://github.com/rayhannajla-hash/12-ai-engineer-roadmap)
 
 ---
 
@@ -236,9 +244,9 @@ Bisnis AI end-to-end: customer chat ke bot Telegram → AI orchestrator kumpulka
 
 **Produk:** HTML Tool, Landing Page, Konten Islami, Script YouTube — masing-masing dengan handler & prompt khusus.
 
-**Tech:** `FastAPI` `Supabase/PostgreSQL` `GCP VM` `Docker` `Telegram Bot API` `OpenRouter` `Async Python`
-
-**Highlight:** ~85% operasional harian berjalan otomatis (intake, antrean, produksi, delivery, invoice, reminder, daily report). Biaya operasional ~Rp 150rb/bulan.
+**Tech:** `FastAPI` `Supabase/PostgreSQL` `GCP VM` `Docker` `Telegram Bot API` `OpenRouter` `Async Python`  
+**Highlight:** ~85% operasional harian berjalan otomatis (intake, antrean, produksi, delivery, invoice, reminder, daily report). Biaya operasional ~Rp 150rb/bulan.  
+**Repo:** [santosa-ai-works](https://github.com/rayhannajla-hash/santosa-ai-works) · **Live:** [Landing Page](https://rayhannajla-hash.github.io/santosa-ai-works-web) · [Bot Telegram](https://t.me/SantosaAIworks)
 
 ---
 
@@ -250,12 +258,12 @@ Python Scripting          ███████░░░  Intermediate
 Local AI / LM Studio      ████████░░  Advanced
 HTML/JS Single-file Apps  ████████░░  Advanced
 Excel / xlsxwriter        ████████░░  Advanced
+Multi-provider LLM API    ████████░░  Advanced
 RAG Systems               ██████░░░░  Intermediate
 Docker / GCP              ██████░░░░  Intermediate
 FastAPI / Async Python    ███████░░░  Intermediate
 Supabase / PostgreSQL     ██████░░░░  Intermediate
 FreeCAD / CAD Macro       ██████░░░░  Intermediate
-Multi-provider LLM API    ████████░░  Advanced
 IT-restricted Solutions   █████████░  Expert
 ```
 
@@ -270,5 +278,13 @@ IT-restricted Solutions   █████████░  Expert
 
 ---
 
-*Dokumentasi dibuat: Maret 2026 · Semua project dibangun secara self-taught*  
+## 🔗 Links
+
+- 💼 GitHub: [github.com/rayhannajla-hash](https://github.com/rayhannajla-hash)
+- 🤖 Telegram Bot: [@SantosaAIworks](https://t.me/SantosaAIworks)
+- 🌐 Santosa AI Works: [rayhannajla-hash.github.io/santosa-ai-works-web](https://rayhannajla-hash.github.io/santosa-ai-works-web)
+
+---
+
+*Diperbarui: Juni 2026 · Semua project dibangun secara self-taught*  
 *"Portofolio beats degree." — Budhi 🚀*
