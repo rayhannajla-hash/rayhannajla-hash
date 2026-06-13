@@ -20,7 +20,7 @@ Semua proyek dibangun dalam kondisi nyata:
 
 | Metric | Value |
 |--------|-------|
-| Total Projects | 12+ |
+| Total Projects | 13+ |
 | Domain Coverage | 5 area |
 | Learning Approach | 100% Self-taught |
 | Primary Focus | LLM, Prompt Engineering, Local AI |
@@ -60,6 +60,12 @@ Semua proyek dibangun dalam kondisi nyata:
 |---|---------|--------|-------|
 | 11 | [Task.html Dashboard](#11-taskhtml-team-dashboard) | ✅ Done | Alpine.js, HTML |
 | 12 | [AI Engineer Roadmap Tool](#12-ai-engineer-roadmap-tool) | ✅ Done | HTML/JS |
+
+### 🚀 AI Product & Automation
+
+| # | Project | Status | Stack |
+|---|---------|--------|-------|
+| 13 | [Santosa AI Works](#13-santosa-ai-works) | ✅ Live | FastAPI, Supabase, GCP, Telegram |
 
 ---
 
@@ -217,6 +223,25 @@ Tool untuk memvisualisasikan dan melacak progress belajar AI Engineering. 4 fase
 
 ---
 
+### 13. Santosa AI Works
+
+**Studio AI mikro yang dijalankan otomatis oleh pekerja AI — order via Telegram, hasil dikirim 24/7**
+
+Bisnis AI end-to-end: customer chat ke bot Telegram → AI orchestrator kumpulkan brief & buat order → worker produksi via LLM → hasil + invoice dikirim otomatis. Mulai dari Rp 30.000, tanpa antre, 24/7.
+
+**Arsitektur:**
+- **Hermes** — orchestrator FastAPI + Telegram polling di GCP VM. Intake customer via LLM, manajemen antrean, QC, delivery, dan verifikasi pembayaran (1 klik approve)
+- **Supabase** — PostgreSQL sebagai database + job queue + CRM + audit trail, plus Storage untuk file hasil
+- **Worker** — Python async worker yang poll antrean dan produksi deliverable via LLM
+
+**Produk:** HTML Tool, Landing Page, Konten Islami, Script YouTube — masing-masing dengan handler & prompt khusus.
+
+**Tech:** `FastAPI` `Supabase/PostgreSQL` `GCP VM` `Docker` `Telegram Bot API` `OpenRouter` `Async Python`
+
+**Highlight:** ~85% operasional harian berjalan otomatis (intake, antrean, produksi, delivery, invoice, reminder, daily report). Biaya operasional ~Rp 150rb/bulan.
+
+---
+
 ## ⚡ Skills
 
 ```
@@ -227,6 +252,8 @@ HTML/JS Single-file Apps  ████████░░  Advanced
 Excel / xlsxwriter        ████████░░  Advanced
 RAG Systems               ██████░░░░  Intermediate
 Docker / GCP              ██████░░░░  Intermediate
+FastAPI / Async Python    ███████░░░  Intermediate
+Supabase / PostgreSQL     ██████░░░░  Intermediate
 FreeCAD / CAD Macro       ██████░░░░  Intermediate
 Multi-provider LLM API    ████████░░  Advanced
 IT-restricted Solutions   █████████░  Expert
